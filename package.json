@@ -1,11 +1,11 @@
 {
-  "name": "http-server",
-  "version": "0.11.1",
-  "description": "A simple zero-configuration command-line http server",
+  "name": "http-server-qrcode",
+  "version": "0.1.0",
+  "description": "Modified http-server to render QR codes for file paths.",
   "main": "./lib/http-server",
   "repository": {
     "type": "git",
-    "url": "git://github.com/indexzero/http-server.git"
+    "url": "git://github.com/grantbi/http-server-qrcode.git"
   },
   "keywords": [
     "cli",
@@ -20,52 +20,8 @@
     "lib",
     "bin"
   ],
-  "contributors": [
-    {
-      "name": "Charlie Robbins",
-      "email": "charlie.robbins@gmail.com"
-    },
-    {
-      "name": "Marak Squires",
-      "email": "marak.squires@gmail.com"
-    },
-    {
-      "name": "Charlie McConnell",
-      "email": "charlie@charlieistheman.com"
-    },
-    {
-      "name": "Joshua Holbrook",
-      "email": "josh.holbrook@gmail.com"
-    },
-    {
-      "name": "Maciej Małecki",
-      "email": "maciej.malecki@notimplemented.org"
-    },
-    {
-      "name": "Matthew Bergman",
-      "email": "mzbphoto@gmail.com"
-    },
-    {
-      "name": "brad dunbar",
-      "email": "dunbarb2@gmail.com"
-    },
-    {
-      "name": "Dominic Tarr"
-    },
-    {
-      "name": "Travis Person",
-      "email": "travis.person@gmail.com"
-    },
-    {
-      "name": "Jinkwon Lee",
-      "email": "master@bdyne.net"
-    },
-    {
-      "name": "BigBlueHat",
-      "email": "byoung@bigbluehat.com"
-    }
-  ],
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "colors": "1.0.3",
     "corser": "~2.0.0",
     "ecstatic": "^3.0.0",
@@ -73,15 +29,13 @@
     "opener": "~1.4.0",
     "optimist": "0.6.x",
     "portfinder": "^1.0.13",
+    "qrcode": "^1.3.3",
     "union": "~0.4.3"
   },
   "devDependencies": {
     "common-style": "^3.0.0",
     "request": "2.49.x",
     "vows": "0.7.x"
-  },
-  "bugs": {
-    "url": "https://github.com/nodeapps/http-server/issues"
   },
   "license": "MIT",
   "preferGlobal": "true",

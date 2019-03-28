@@ -120,7 +120,9 @@ function listen(port) {
     };
   }
 
-  var server = httpServer.createServer(options);
+  var canonicalHost = host === '0.0.0.0' ? '127.0.0.1' : host,
+    protocol = ssl ? 'https://' : 'http://';
+  var server = httpServer.createServer(options, { canonicalHost, protocol, port });
   server.listen(port, host, function () {
     var canonicalHost = host === '0.0.0.0' ? '127.0.0.1' : host,
         protocol      = ssl ? 'https://' : 'http://';
